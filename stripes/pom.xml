@@ -65,12 +65,12 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.0.1</version>
+            <version>2.15.0</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.0.1</version>
+            <version>2.15.0</version>
         </dependency>
     </dependencies>
 
@@ -105,13 +105,13 @@
                         <configuration>
                             <target>
                                 <!-- make two copies of the taglib, one with and one without dynamic attributes -->
-                                <filter filtersfile="${tld.source}/common-descriptions.properties" />
-                                <filter token="dynattrs" value="false" />
-                                <copy file="${tld.source}/stripes.tld" todir="${tld.target}" filtering="true" />
+                                <filter filtersfile="${tld.source}/common-descriptions.properties"/>
+                                <filter token="dynattrs" value="false"/>
+                                <copy file="${tld.source}/stripes.tld" todir="${tld.target}" filtering="true"/>
 
-                                <filter token="dynattrs" value="true" />
-                                <copy file="${tld.source}/stripes.tld" tofile="${tld.target}/stripes-dynattr.tld" filtering="true" />
-                                <replace file="${tld.target}/stripes-dynattr.tld" token="${tld.uri}" value="${tld.dynuri}" />
+                                <filter token="dynattrs" value="true"/>
+                                <copy file="${tld.source}/stripes.tld" tofile="${tld.target}/stripes-dynattr.tld" filtering="true"/>
+                                <replace file="${tld.target}/stripes-dynattr.tld" token="${tld.uri}" value="${tld.dynuri}"/>
                             </target>
                         </configuration>
                         <goals>
